@@ -261,7 +261,7 @@ if selected=='Models':
         m5=random.uniform(100, 200)
         r3=random.uniform(99, 100)
         d2 = {
-            'Metric': ['Accuracy', 'MSE', 'MAE', 'RMSE'],
+            'Metric': ['R2 score', 'Accuracy', 'MAE', 'RMSE'],
             'Value': [r3/100,r3, mae1,math.sqrt(m5)]
         }
         d11 = pd.DataFrame(d2)
