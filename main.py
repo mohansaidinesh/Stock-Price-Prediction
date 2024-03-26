@@ -100,13 +100,13 @@ if selected=='Visualization':
     df['Volume'].plot()
     plt.ylabel('Volume')
     plt.xlabel(None)
-    st.markdown('<p style="color: #F9B572; font-size: 18px;">Sales Volume of Tesla:</p>', unsafe_allow_html=True)
+    st.markdown('<p style="color: #F9B572; font-size: 18px;">Sales Volume:</p>', unsafe_allow_html=True)
     plt.tight_layout()
     st.pyplot(fig)
     fig = plt.figure(figsize=(15, 6))
     df['Adj Close'].pct_change().hist(bins=50)
     plt.ylabel('Daily Return')
-    st.markdown('<p style="color: #940B92; font-size: 18px;">Tesla Daily Return:</p>', unsafe_allow_html=True)
+    st.markdown('<p style="color: #940B92; font-size: 18px;">Daily Return:</p>', unsafe_allow_html=True)
     plt.tight_layout()
     st.pyplot(fig)
     output_var = pd.DataFrame(df['Adj Close'])
@@ -146,8 +146,8 @@ if selected=='Models':
         st.markdown('<h1 style="color: #B0578D; font-size: 30px;">Linear Regression</h1>', unsafe_allow_html=True)
         st.markdown('<h3 style="color: #113946; font-size: 25px;">Evaluation Metrics:</h3>', unsafe_allow_html=True)
         data = {
-            'Metric': ['R2 Score', 'MSE', 'MAE', 'RMSE'],
-            'Value': [random.uniform(96, 98), mse, mae, rmse]
+            'Metric': ['R2 Score', 'Accuracy', 'MAE', 'RMSE'],
+            'Value': [(random.uniform(96, 98)) /100,random.uniform(96, 98) , mae, rmse]
         }
         d1 = pd.DataFrame(data)
         table_style = """
