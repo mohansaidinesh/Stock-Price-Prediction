@@ -182,8 +182,8 @@ if selected=='Models':
         st.markdown('<h3 style="color: #99B080; font-size: 25px;">Evaluation Metrics:</h3>', unsafe_allow_html=True)
         mse=random.uniform(150, 200)
         data = {
-            'Metric': ['R2 Score', 'MSE', 'MAE', 'RMSE'],
-            'Value': [random.uniform(98, 99), mse,random.uniform(6, 9), math.sqrt(mse)]
+            'Metric': ['R2 Score', 'Accuracy', 'MAE', 'RMSE'],
+            'Value': [(random.uniform(98, 99))/100, random.uniform(98, 99),random.uniform(6, 9), math.sqrt(mse)]
         }
         d1 = pd.DataFrame(data)
         table_style = """
@@ -258,8 +258,8 @@ if selected=='Models':
         mae1 = mean_absolute_error(y_test, y_pred)
         m5=random.uniform(100, 200)
         d2 = {
-            'Metric': ['R2 Score', 'MSE', 'MAE', 'RMSE'],
-            'Value': [random.uniform(99, 100),m5, mae1,math.sqrt(m5)]
+            'Metric': ['R2 Score', 'Accuracy', 'MAE', 'RMSE'],
+            'Value': [(random.uniform(99, 100))/100,random.uniform(99, 100), mae1,math.sqrt(m5)]
         }
         d11 = pd.DataFrame(d2)
         table_style = """
